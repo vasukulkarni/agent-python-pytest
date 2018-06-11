@@ -81,11 +81,15 @@ def pytest_collection_modifyitems(session, config, items):
 
 
 def pytest_collection_finish(session):
+    if session.config.getoption('--collect-only', default=False) is True:
+        return
+
     if session.config._reportportal_configured is False:
         # Stop now if the plugin is not properly configured
         return
 
-    session.config.py_test_service.collect_tests(session)
+    if is_master(session.config):
+        session.config.py_test_service.collect_tests(session)
 
 
 def wait_launch(rp_client):
@@ -109,6 +113,8 @@ def pytest_sessionfinish(session):
             status='RP_Launch', force=nowait)
 
     session.config.py_test_service.terminate_service(nowait=nowait)
+
+    session.config.py_test_service.terminate_service()
 
 
 def pytest_configure(config):
