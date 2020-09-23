@@ -8,7 +8,7 @@ def read_file(fname):
         return f.read()
 
 
-version = '1.10.0'
+version = '1.10.3'
 
 
 requirements = [
@@ -27,7 +27,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Pavel Papou',
     author_email='SupportEPMC-TSTReportPortal@epam.com',
-    url='https://github.com/reportportal/agent-python-pytest',
+    url='https://github.com/vasukulkarni/agent-python-pytest',
     packages=['pytest_reportportal'],
     install_requires=requirements,
     license='Apache 2.0',
