@@ -20,7 +20,7 @@ requirements = [
 
 
 setup(
-    name='pytest-reportportal-mongodb',
+    name='pytest-reportportal',
     version=version,
     description='Agent for Reporting results of tests to the Report Portal',
     long_description=read_file('README.rst'),
