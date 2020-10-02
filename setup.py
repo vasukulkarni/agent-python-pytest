@@ -20,12 +20,12 @@ requirements = [
 
 
 setup(
-    name='ocs-reportportal',
+    name='pytest-reportportal-mongodb',
     version=version,
     description='Agent for Reporting results of tests to the Report Portal',
     long_description=read_file('README.rst'),
     long_description_content_type='text/markdown',
-    author='Vasu Kulkarni',
+    author='Pavel Papou'
     author_email='vasu.kulkarni@gmail.com',
     url='https://github.com/vasukulkarni/agent-python-pytest',
     packages=['pytest_reportportal'],
